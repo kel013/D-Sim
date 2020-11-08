@@ -49,7 +49,9 @@ public class TaskController : MonoBehaviour
     public void RandomFillTasks(int x)
     {
         activeTasks.Clear();
-        List<Task> r = taskList;
+        List<Task> r = new List<Task>();
+        r.AddRange(taskList);
+
         for (int i = 0; i < x; i++)
         {
             if(r.Count == 0)
@@ -59,6 +61,7 @@ public class TaskController : MonoBehaviour
             int random = Random.Range(0, r.Count);
             TaskCheck task = new TaskCheck();
             task.task = r[random];
+            task.check = false;
             activeTasks.Add(task);
             r.RemoveAt(random);
         }
