@@ -2,38 +2,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class PrefabSwitcher : MonoBehaviour
 {
-    [SerializeField] private GameObject[] prefabs;
+    [SerializeField] private GameObject defaultObject;
+    [SerializeField] private GameObject[] otherObjects;
     private int currPrefab;
 
     public void SetNextAfterFrames(int frames)
     {
-        if ((currPrefab + 1) >= prefabs.Length)
+        if ((currPrefab + 1) >= otherObjects.Length)
             SetAfterFrames(0, frames);
         SetAfterFrames(currPrefab+1, frames);
     }
 
-    public void SetDefaultAfterFrames(int frames)
+    public void SetDefaultAfterFrames()
     {
-        SetAfterFrames(0, frames);
+        // StartCoroutine(SetDefaultAfterFramesCoroutine(frames));
+        for (int i = 0; i < otherObjects.Length; i++)
+        {
+            otherObjects[i].SetActive(false);
+        }
+        defaultObject.SetActive(true);
     }
 
+    public void SetRandomAfterFrames(int frames)
+    {
+        var rand = Random.Range(0, otherObjects.Length);
+        SetAfterFrames(rand, frames);
+    }
     private void Set(int index)
     {
-        if (index >= prefabs.Length) return;
+        if (index >= otherObjects.Length) return;
         if (index < 0) return;
         
-        for (int i = 0; i < prefabs.Length; i++)
+        for (int i = 0; i < otherObjects.Length; i++)
         {
-            prefabs[i].SetActive(i == index);
+            otherObjects[i].SetActive(i == index);
             currPrefab = index;
         }
+        defaultObject.SetActive(false);
     }
 
     public void SetAfterFrames(int index, int frames)
     {
+        StopAllCoroutines();
         StartCoroutine(SetAfterFramesCoroutine(index, frames));
     }
 
@@ -44,5 +59,18 @@ public class PrefabSwitcher : MonoBehaviour
             yield return null;
         }
         Set(index);
+    }
+
+    private IEnumerator SetDefaultAfterFramesCoroutine(int frames)
+    {
+        for (int i = 0; i < frames; i++)
+        {
+            yield return null;
+        }
+        for (int i = 0; i < otherObjects.Length; i++)
+        {
+            otherObjects[i].SetActive(false);
+        }
+        defaultObject.SetActive(true);
     }
 }
