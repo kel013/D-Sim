@@ -5,13 +5,14 @@ using UnityEngine;
 public class Microwave : Interactable
 {
     [SerializeField] Animation anim;
+    AudioSource audio;
 
     bool isOpen = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -20,13 +21,22 @@ public class Microwave : Interactable
             return;
 
         if (!isOpen)
+        {
             anim.Play("microwave_open");
+            audio.Stop();
+        }
         else
         {
-            anim.Play("microwave_close");
-            // play sound fx
-            linkedTask.done = true;
+            StartCoroutine(CloseDoor());
         }
         isOpen = !isOpen;
+    }
+
+    IEnumerator CloseDoor()
+    {
+        anim.Play("microwave_close");
+        linkedTask.done = true;
+        yield return new WaitForSeconds(1.3f);
+        audio.Play();
     }
 }

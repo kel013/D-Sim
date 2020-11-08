@@ -9,6 +9,7 @@ public class Laptop : Interactable
     int currentMessage;
     [SerializeField] Text textDisplay;
     [SerializeField] Animation anim;
+    AudioSource audio;
 
     bool isOpen = false;
 
@@ -18,6 +19,7 @@ public class Laptop : Interactable
         anim = GetComponent<Animation>();
         anim["laptop_Close"].speed = 5;
         anim.Play("laptop_Close");
+        audio = GetComponent<AudioSource>();
 
         //currentMessage = 0;
         //textDisplay.text = messageList[currentMessage];
@@ -46,10 +48,13 @@ public class Laptop : Interactable
                 anim.Play("laptop_Close");
                 isOpen = false;
 
-                linkedTask.done = true; 
+                linkedTask.done = true;
             }
             else
+            {
                 currentMessage++;
+                audio.Play();
+            }
 
             textDisplay.text = messageList[currentMessage];
         }
