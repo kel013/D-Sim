@@ -4,5 +4,6 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
+    Task linkedTask;
     public abstract void Interact();
 }
