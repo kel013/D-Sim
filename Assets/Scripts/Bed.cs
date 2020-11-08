@@ -13,6 +13,7 @@ public class Bed : Interactable // BREADTIMEEE
 
     public override void Interact()
     {
+        onInteract?.Invoke();
         if (taskController.AllTasksDone())
         {
             Debug.Log("next day");

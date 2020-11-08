@@ -7,23 +7,23 @@ public class RandomWordGenerator : MonoBehaviour
 {
     [SerializeField] private string[] words;
     [SerializeField] private int wordCount;
-    [SerializeField] private Text[] texts;
+    [SerializeField] private TextMesh[] texts;
 
     private string[] selectedWords;
     private void Start()
     {
         selectedWords = new string[wordCount];
-        int[] nextArr;
+        
         for (int i = 0; i < wordCount; i++)
         {
-            var rand = Random.Range(0, words.Length);
-            var selected = texts[rand];
-            selected.text = words[rand];
-            selectedWords[i] = words[rand];
-            nextArr = new int[words.Length - 1];
-            
+            Array.Sort(words, (x, y) => Random.Range(-1, 2));
+            Array.Sort(texts, (x, y) => Random.Range(-1, 2));
         }
-        
-        
+        for (int i = 0; i < wordCount; i++)
+        {
+            var selected = texts[i];
+            selected.text = words[i];
+            selectedWords[i] = words[i];
+        }
     }
 }

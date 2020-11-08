@@ -8,35 +8,53 @@ using UnityEngine.Timeline;
 public class ViewDetector : MonoBehaviour
 {
     [SerializeField] private float viewDistance;
-    [SerializeField] private UnityEvent OnDetect, OnUndetect;
+    [SerializeField] private Transform optionalLookObject;
+    [SerializeField] private UnityEvent OnDetect, OnUndetect, OnEnterRadius, OnLeaveRadius;
     private float detectionAngle;
-    private bool isLooking;
+    private bool isLooking, isInRadius;
+    private Camera _camera;
+    private Vector3 _pos;
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(transform.position, viewDistance);
+        var pos = optionalLookObject ? optionalLookObject.transform.position : transform.position;
+        Gizmos.DrawWireSphere(pos, viewDistance);
     }
 
     private void Start()
     {
-        detectionAngle = Camera.main.fieldOfView * Camera.main.aspect;
+        _camera = Camera.main;
+        _pos = optionalLookObject ? optionalLookObject.transform.position : transform.position;
+        detectionAngle = _camera.fieldOfView - 10;
     }
 
     private void Update()
     {
-        var posDelta = Camera.main.transform.position - transform.position;
-        var angle = Vector3.Angle(Camera.main.transform.forward, transform.position);
-        if (angle < detectionAngle && (posDelta).magnitude < viewDistance)
+        var posDelta = _camera.transform.position - _pos;
+        var angle = Vector3.Angle(-posDelta, _camera.transform.forward);
+        if ((posDelta).magnitude < viewDistance)
         {
-            if (!isLooking)
+            if (!isInRadius)
             {
-                OnDetect?.Invoke();
-                isLooking = true;
+                OnEnterRadius?.Invoke();
+                isInRadius = true;
             }
-        } else if (isLooking)
+            if (angle < detectionAngle)
+            {
+                if (!isLooking)
+                {
+                    OnDetect?.Invoke();
+                    isLooking = true;
+                }
+            } else if (isLooking)
+            {
+                OnUndetect?.Invoke();
+                isLooking = false;
+            }
+        } else if (isInRadius)
         {
-            OnUndetect?.Invoke();
-            isLooking = false;
+            OnLeaveRadius?.Invoke();
+            isInRadius = false;
         }
     }
 }
