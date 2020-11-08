@@ -8,11 +8,16 @@ public class PrefabSwitcher : MonoBehaviour
     [SerializeField] private GameObject[] prefabs;
     private int currPrefab;
 
-    public void SetNext(int frames)
+    public void SetNextAfterFrames(int frames)
     {
         if ((currPrefab + 1) >= prefabs.Length)
             SetAfterFrames(0, frames);
         SetAfterFrames(currPrefab+1, frames);
+    }
+
+    public void SetDefaultAfterFrames(int frames)
+    {
+        SetAfterFrames(0, frames);
     }
 
     private void Set(int index)

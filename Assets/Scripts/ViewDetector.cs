@@ -8,13 +8,18 @@ using UnityEngine.Timeline;
 public class ViewDetector : MonoBehaviour
 {
     [SerializeField] private float viewDistance;
-    [SerializeField] private float detectionAngle = 60;
     [SerializeField] private UnityEvent OnDetect, OnUndetect;
+    private float detectionAngle;
     private bool isLooking;
 
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, viewDistance);
+    }
+
+    private void Start()
+    {
+        detectionAngle = Camera.main.fieldOfView * Camera.main.aspect;
     }
 
     private void Update()
@@ -30,8 +35,8 @@ public class ViewDetector : MonoBehaviour
             }
         } else if (isLooking)
         {
-            isLooking = false;
             OnUndetect?.Invoke();
+            isLooking = false;
         }
     }
 }
