@@ -11,7 +11,7 @@ public class Grabbable : Interactable
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("MainCamera");
         grabbed = false;
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
