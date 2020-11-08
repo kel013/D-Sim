@@ -20,6 +20,7 @@ public class Interactor : MonoBehaviour
         {
             Interactable obj = hit.transform.gameObject.GetComponent<Interactable>();
             obj.Interact();
+
         }
     }
 }
