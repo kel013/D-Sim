@@ -14,5 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - 'You: Hi'
-  - 'Friend: Fuck you'
-  - 'You: Ok'
+  - 'Box: Hey'
+  - 'You: ... Wait you''re a box.'
+  - 'Box: Yeah.'
+  - 'You: Why can you talk?'
+  - 'Box: Why can you talk?'
+  - 'You: ...'
+  - 'Box: You don''t remember me but it''s okay.'
+  - 'Box: Left me alone all those years.'
+  - 'Box: Do you even know what''s inside anymore?'
