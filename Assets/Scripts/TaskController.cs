@@ -21,13 +21,6 @@ public class TaskController : MonoBehaviour
     {
         RandomFillTasks(3);
     }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            CheckOffTask(0);
-        }
-    }
 
     public bool AllTasksDone()
     {
