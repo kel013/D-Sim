@@ -16,6 +16,8 @@ public class Microwave : Interactable
 
     public override void Interact()
     {
+        linkedTask.done = true;
+        return; // microwave anim has bugs
         if (anim.isPlaying)
             return;
 

@@ -31,5 +31,7 @@ public class ToiletFlush : Interactable
         else
             yield return 0;
         anim.Play("flush");
+
+        linkedTask.done = true;
     }
 }

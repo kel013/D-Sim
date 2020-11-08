@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TalkToFriend
   m_EditorClassIdentifier: 
   taskName: Talk to Your Neighbor
-  done: 1
+  done: 0

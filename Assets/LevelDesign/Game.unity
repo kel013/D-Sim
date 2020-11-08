@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323714f34ab1ec4408e54b9f2b76f3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedTask: {fileID: 0}
+  linkedTask: {fileID: 11400000, guid: 3a2565b7aebae964c92c4748bc893f75, type: 2}
   anim: {fileID: 663123565}
   toilet: {fileID: 663123568}
 --- !u!65 &663123571
@@ -3763,7 +3763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acbaf21d52f40946b27e22e0aa13cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedTask: {fileID: 0}
+  linkedTask: {fileID: 11400000, guid: 2cf859b43b55bdd4b82317709191f446, type: 2}
   anim: {fileID: 917038244}
   freezer: {fileID: 917038247}
 --- !u!65 &917038246
@@ -3791,7 +3791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77892e7f02534d4b817c84da3ea3516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedTask: {fileID: 0}
+  linkedTask: {fileID: 11400000, guid: 7997bb74b57996b43a9247e0ce5ce4fd, type: 2}
   anim: {fileID: 917038244}
   fridge: {fileID: 917038245}
 --- !u!65 &917038248
@@ -6395,12 +6395,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368631274}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c008a647193f3bf4ea90f8d8e6cbe8d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedTask: {fileID: 0}
+  linkedTask: {fileID: 11400000, guid: bbd9def80ec5cce489b918b3df7e4bc5, type: 2}
   anim: {fileID: 1368631275}
 --- !u!65 &1368631277
 BoxCollider:
@@ -7608,6 +7608,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d66615db9ad24b54ca7e3f6015910a52, type: 3}
+--- !u!1 &1583175813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d66615db9ad24b54ca7e3f6015910a52, type: 3}
+  m_PrefabInstance: {fileID: 1583175812}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1583175814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583175813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f5cf46d73167d4d87a086859153399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkedTask: {fileID: 11400000, guid: 7b1c2c7f46d631e4eaf178e92f851ba3, type: 2}
+--- !u!65 &1583175815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583175813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1531005, y: 2.6890423, z: 1.672537}
+  m_Center: {x: 0.027265014, y: 1.2176527, z: -0.01334683}
 --- !u!1 &1616432560
 GameObject:
   m_ObjectHideFlags: 0
