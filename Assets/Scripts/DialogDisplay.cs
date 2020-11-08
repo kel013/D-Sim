@@ -13,6 +13,7 @@ public class DialogDisplay : MonoBehaviour
     bool talking;
     public void DisplayDialog(string[] line)
     {
+        Debug.Log("talk");
         currentLine = 0;
         StartCoroutine(StartDialog(line));
     }

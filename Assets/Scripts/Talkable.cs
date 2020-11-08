@@ -10,6 +10,7 @@ public class Talkable : Interactable
     Dialog dialog;
     public override void Interact()
     {
+        Debug.Log("attemp");
         display.DisplayDialog(dialog.lines);
     }
 }

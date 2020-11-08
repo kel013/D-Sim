@@ -25,6 +25,7 @@ public class Interactor : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward,out hit,range,layer))
         {
+            Debug.Log("hit " + hit.transform.gameObject.name);
             Interactable obj = hit.transform.gameObject.GetComponent<Interactable>();
             if (obj != null)
             {

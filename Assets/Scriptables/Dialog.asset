@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07df0c59bbce6a244bb00488b1d278a2, type: 3}
   m_Name: Dialog
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - 'You: Hi'
+  - 'Friend: Fuck you'
+  - 'You: Ok'
