@@ -7,7 +7,8 @@ public class Laptop : Interactable
 {
     public List<string> messageList = new List<string>();
     int currentMessage;
-    public Text textDisplay;
+    [SerializeField] Text textDisplay;
+    [SerializeField] Animation closeAnim, openAnim;
 
     // Start is called before the first frame update
     void Start()

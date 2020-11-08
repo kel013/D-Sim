@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: c32da1479b6554941bc6ddc21cef223b
+guid: ca9b87d6aca69a6408b8355761265db3
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 743106663154150417
+    second: laptop_Open
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -92,7 +95,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
