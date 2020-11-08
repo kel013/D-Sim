@@ -11,12 +11,12 @@ public class LoopCamera : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		Vector3 playerOffsetFromPortal = playerCamera.position - otherPortal.position;
-		transform.position = portal.position - playerOffsetFromPortal;
+		// transform.position = portal.position - playerOffsetFromPortal;
 
 		float angularDifferenceBetweenPortalRotations = Quaternion.Angle(portal.rotation, otherPortal.rotation);
 
 		Quaternion portalRotationalDifference = Quaternion.AngleAxis(angularDifferenceBetweenPortalRotations, Vector3.up);
 		Vector3 newCameraDirection = portalRotationalDifference * playerCamera.forward;
-		transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
+		// transform.rotation = Quaternion.LookRotation(newCameraDirection, Vector3.up);
 	}
 }
