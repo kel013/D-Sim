@@ -83,7 +83,9 @@ public class TaskController : MonoBehaviour
         if(activeTasks[x].task.done)
         {
             activeTasks[x].check = true;
-            audio.Play();
+            if (!activeTasks[x].task.isChecked)
+                audio.Play();
+            activeTasks[x].task.isChecked = true;
         }
         display.UpdateList();
     }
@@ -93,6 +95,7 @@ public class TaskController : MonoBehaviour
         for(int x = 0; x < taskList.Count; x++)
         {
             taskList[x].done = false;
+            taskList[x].isChecked = false;
         }
     }
 }

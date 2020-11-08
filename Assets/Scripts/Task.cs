@@ -7,4 +7,5 @@ public class Task : ScriptableObject
 {
     public string taskName;
     public bool done = false;
+    public bool isChecked = false;
 }
