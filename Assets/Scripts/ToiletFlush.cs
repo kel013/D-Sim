@@ -18,14 +18,18 @@ public class ToiletFlush : Interactable
         if (anim.isPlaying)
             return;
 
-        if (!toilet.IsOpen())
-            toilet.OpenToilet();
         StartCoroutine(FlushToilet());
     }
 
     IEnumerator FlushToilet()
     {
-        yield return new WaitForSeconds(anim["toilet_Open"].length * anim["toilet_Open"].speed);
+        if (!toilet.IsOpen())
+        {
+            toilet.OpenToilet();
+            yield return new WaitForSeconds(anim["toilet_Open"].length * anim["toilet_Open"].speed);
+        }
+        else
+            yield return 0;
         anim.Play("flush");
     }
 }
