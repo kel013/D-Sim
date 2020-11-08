@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_GlitchEffect
+  m_Name: GlitchMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 3ffaa8a103681a34a92a680ffee41aee, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -19,6 +19,9 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs: []
-    m_Floats: []
+    m_Floats:
+    - Vector1_8BC2BD52: 2.54
+    - Vector1_99011696: 2
+    - Vector1_A02770FF: 50
     m_Colors: []
   m_BuildTextureStacks: []
