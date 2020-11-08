@@ -10,12 +10,15 @@ public class DialogDisplay : MonoBehaviour
     [SerializeField]
     float perCharacterPauseTime = 0.1f;
     int currentLine;
-    bool talking;
+    bool talking = false;
     public void DisplayDialog(string[] line)
     {
         Debug.Log("talk");
-        currentLine = 0;
-        StartCoroutine(StartDialog(line));
+        if (!talking)
+        {
+            currentLine = 0;
+            StartCoroutine(StartDialog(line));
+        }
     }
     IEnumerator StartDialog(string[] line)
     {
