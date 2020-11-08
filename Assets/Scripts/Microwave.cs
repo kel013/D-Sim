@@ -16,15 +16,17 @@ public class Microwave : Interactable
 
     public override void Interact()
     {
-        linkedTask.done = true;
-        return; // microwave anim has bugs
         if (anim.isPlaying)
             return;
 
         if (!isOpen)
             anim.Play("microwave_open");
         else
+        {
             anim.Play("microwave_close");
+            // play sound fx
+            linkedTask.done = true;
+        }
         isOpen = !isOpen;
     }
 }

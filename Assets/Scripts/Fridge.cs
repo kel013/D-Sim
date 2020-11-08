@@ -46,6 +46,7 @@ public class Fridge : Interactable
     {
         anim.Play("fridge_open");
         isOpen = true;
+        linkedTask.done = true;
     }
 
     public void CloseFridge()

@@ -46,6 +46,7 @@ public class Freezer : Interactable
     {
         anim.Play("freezer_open");
         isOpen = true;
+        linkedTask.done = true;
     }
 
     public void CloseFreezer()
