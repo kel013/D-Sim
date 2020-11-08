@@ -13,14 +13,23 @@ public class Interactor : MonoBehaviour
     [SerializeField]
     LayerMask layer;
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(interactKey))
+        {
+            interact();
+        }
+    }
     public void interact()
     {
         RaycastHit hit;
         if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward,out hit,range,layer))
         {
             Interactable obj = hit.transform.gameObject.GetComponent<Interactable>();
-            obj.Interact();
-
+            if (obj != null)
+            {
+                obj.Interact();
+            }
         }
     }
 }
