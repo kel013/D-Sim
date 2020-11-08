@@ -6,11 +6,12 @@ public class ToiletFlush : Interactable
 {
     [SerializeField] Animation anim;
     [SerializeField] Toilet toilet;
+    AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -31,6 +32,7 @@ public class ToiletFlush : Interactable
         else
             yield return 0;
         anim.Play("flush");
+        audio.Play();
 
         linkedTask.done = true;
     }

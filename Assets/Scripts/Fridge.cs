@@ -8,6 +8,8 @@ public class Fridge : Interactable
     [SerializeField] Freezer freezer;
     bool isOpen = false;
 
+    [SerializeField] AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,13 +48,19 @@ public class Fridge : Interactable
     {
         anim.Play("fridge_open");
         isOpen = true;
-        linkedTask.done = true;
     }
 
     public void CloseFridge()
     {
         anim.Play("fridge_close");
         isOpen = false;
+        linkedTask.done = true;
+        StartCoroutine(CloseSound());
     }
 
+    IEnumerator CloseSound()
+    {
+        yield return new WaitForSeconds(1.15f);
+        audio.Play();
+    }
 }
