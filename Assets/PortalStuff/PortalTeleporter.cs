@@ -8,18 +8,25 @@ public class PortalTeleporter : MonoBehaviour {
 	public Transform reciever;
 
 	private bool playerIsOverlapping = false;
+	CharacterController cc;
 
+    private void Start()
+    {
+		cc = player.gameObject.GetComponent<CharacterController>();
+    }
 
-	// Update is called once per frame
-	void Update () {
-		if (playerIsOverlapping) 
+    void OnTriggerEnter (Collider other)
+	{
+		if (other.tag == "Player")
 		{
+			playerIsOverlapping = true;
 			Vector3 portalToPlayer = player.position - transform.position;
 			float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
 
 			// If this is true: The player has moved across the portal
 			if (dotProduct < 0f)
 			{
+				cc.enabled = false;
 				// Teleport him!
 				float rotationDiff = -Quaternion.Angle(transform.rotation, reciever.rotation);
 				rotationDiff += 180;
@@ -29,15 +36,8 @@ public class PortalTeleporter : MonoBehaviour {
 				player.position = reciever.position + positionOffset;
 
 				playerIsOverlapping = false;
+				cc.enabled = true;
 			}
-		}
-	}
-
-	void OnTriggerEnter (Collider other)
-	{
-		if (other.tag == "Player")
-		{
-			playerIsOverlapping = true;
 		}
 	}
 
