@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf22b5027d44524ea77d2a72fad4e8d, type: 3}
   m_Name: Task 3
   m_EditorClassIdentifier: 
-  taskName: Do Thing 3
+  taskName: Check Laptop
   done: 1
