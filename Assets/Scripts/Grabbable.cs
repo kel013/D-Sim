@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Grabbable : Interactable
 {
-    [SerializeField]
     GameObject player;
     GameObject prevPar;
     bool grabbed = false;
@@ -12,6 +11,7 @@ public class Grabbable : Interactable
 
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
         grabbed = false;
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
