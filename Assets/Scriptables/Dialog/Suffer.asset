@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07df0c59bbce6a244bb00488b1d278a2, type: 3}
-  m_Name: Dialog 1
+  m_Name: Suffer
   m_EditorClassIdentifier: 
   lines: []

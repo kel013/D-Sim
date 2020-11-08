@@ -9620,7 +9620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516115570}
   m_LocalRotation: {x: 0.706949, y: -0, z: -0, w: 0.70726454}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467930943}
@@ -10191,6 +10191,7 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
 --- !u!65 &1583175815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12555,7 +12556,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   display: {fileID: 1061932857}
-  dialog: {fileID: 11400000, guid: 0fcd10a8cd13be84ba982b0f113d970d, type: 2}
+  dialogSet: []
 --- !u!65 &2140664726
 BoxCollider:
   m_ObjectHideFlags: 0
