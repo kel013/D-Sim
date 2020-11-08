@@ -7,10 +7,16 @@ public class Talkable : Interactable
     [SerializeField]
     DialogDisplay display;
     [SerializeField]
-    Dialog dialog;
+    Dialog[] dialogSet;
+
+    int currentLines = 0;
     public override void Interact()
     {
-        display.DisplayDialog(dialog.lines);
+        display.DisplayDialog(dialogSet[currentLines].lines);
+        if (currentLines < dialogSet.Length - 1)
+        {
+            currentLines++;
+        }
         linkedTask.done = true;
     }
 }
