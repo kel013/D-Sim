@@ -16,7 +16,6 @@ public class DialogDisplay : MonoBehaviour
         Debug.Log("talk");
         if (!talking)
         {
-            currentLine = 0;
             StartCoroutine(StartDialog(line));
         }
     }
@@ -30,6 +29,7 @@ public class DialogDisplay : MonoBehaviour
             currentLine++;
         }
         talking = false;
+        currentLine = 0;
         text.text = "";
     }
 }
