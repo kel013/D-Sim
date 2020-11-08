@@ -13,7 +13,7 @@ public class Talkable : Interactable
     public override void Interact()
     {
         display.DisplayDialog(dialogSet[currentLines].lines);
-        if (currentLines < dialogSet.Length - 1)
+        if (currentLines < dialogSet.Length - 1 && !linkedTask.done)
         {
             currentLines++;
         }
