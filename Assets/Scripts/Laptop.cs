@@ -27,5 +27,6 @@ public class Laptop : Interactable
             currentMessage++;
 
         textDisplay.text = messageList[currentMessage];
+        linkedTask.done = true;
     }
 }

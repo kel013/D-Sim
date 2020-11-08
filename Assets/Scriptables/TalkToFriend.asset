@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edf22b5027d44524ea77d2a72fad4e8d, type: 3}
-  m_Name: Task 2
+  m_Name: TalkToFriend
   m_EditorClassIdentifier: 
-  taskName: Microwave Food
+  taskName: Talk to Your Neighbor
   done: 1

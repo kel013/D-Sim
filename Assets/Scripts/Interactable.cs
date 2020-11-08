@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
-    Task linkedTask;
+    [SerializeField]
+    protected Task linkedTask;
     public abstract void Interact();
 }

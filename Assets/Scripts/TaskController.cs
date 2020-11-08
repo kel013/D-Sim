@@ -20,7 +20,7 @@ public class TaskController : MonoBehaviour
 
     private void Start()
     {
-        RandomFillTasks(3);
+        ResetAll();
     }
 
     public void ResetAll()
