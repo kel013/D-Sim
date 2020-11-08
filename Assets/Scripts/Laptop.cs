@@ -8,13 +8,19 @@ public class Laptop : Interactable
     public List<string> messageList = new List<string>();
     int currentMessage;
     [SerializeField] Text textDisplay;
-    [SerializeField] Animation closeAnim, openAnim;
+    [SerializeField] Animation anim;
+
+    bool isOpen = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentMessage = 0;
-        textDisplay.text = messageList[currentMessage];
+        anim = GetComponent<Animation>();
+        anim["laptop_Close"].speed = 5;
+        anim.Play("laptop_Close");
+
+        //currentMessage = 0;
+        //textDisplay.text = messageList[currentMessage];
     }
 
     public override void Interact()
@@ -22,12 +28,30 @@ public class Laptop : Interactable
         if (messageList.Count <= 0)
             return;
 
-        if (currentMessage >= messageList.Count-1)
-            currentMessage = 0;
+        if (!isOpen)
+        {
+            if (!anim.isPlaying)
+            {
+                currentMessage = 0; // loop back to beginning
+                textDisplay.text = messageList[currentMessage];
+                anim.Play("laptop_Open");
+                isOpen = true;
+            }
+        }
         else
-            currentMessage++;
+        {
+            if (currentMessage >= messageList.Count - 1)
+            {
+                anim["laptop_Close"].speed = 1;
+                anim.Play("laptop_Close");
+                isOpen = false;
 
-        textDisplay.text = messageList[currentMessage];
-        linkedTask.done = true;
+                linkedTask.done = true; 
+            }
+            else
+                currentMessage++;
+
+            textDisplay.text = messageList[currentMessage];
+        }
     }
 }

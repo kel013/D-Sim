@@ -18,17 +18,20 @@ public class Grabbable : Interactable
 
     public override void Interact()
     {
-        
         if(grabbed)
         {
             grabbed = false;
-            this.gameObject.transform.parent = prevPar.transform;
+            if (prevPar == null)
+                this.gameObject.transform.parent = null;
+            else
+                this.gameObject.transform.parent = prevPar.transform;
             rb.isKinematic = false;
         }
         else
         {
             grabbed = true;
-            prevPar = this.gameObject.transform.parent.gameObject;
+            if (transform.parent != null)
+                prevPar = this.gameObject.transform.parent.gameObject;
             this.gameObject.transform.parent = player.transform;
             rb.isKinematic = true;
         }
