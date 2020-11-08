@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.WSA.Input;
 
 public class TaskController : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class TaskController : MonoBehaviour
 
     private void Start()
     {
+        RandomFillTasks(3);
+    }
+
+    public void ResetAll()
+    {
+        Reset();
         RandomFillTasks(3);
     }
 
