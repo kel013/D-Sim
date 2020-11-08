@@ -9,9 +9,10 @@ public class PortalTeleporter : MonoBehaviour {
 
 	private bool playerIsOverlapping = false;
 
+
 	// Update is called once per frame
 	void Update () {
-		if (playerIsOverlapping)
+		if (playerIsOverlapping) 
 		{
 			Vector3 portalToPlayer = player.position - transform.position;
 			float dotProduct = Vector3.Dot(transform.up, portalToPlayer);
