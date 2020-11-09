@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -10,6 +11,8 @@ public class DayController : MonoBehaviour
     TaskController taskController;
     [SerializeField] FirstPersonController playerController;
     [SerializeField] AudioSource alarmAudio;
+    [SerializeField] DayCounter count;
+    [SerializeField] TMP_Text text;
 
     float fadeAmount = 0.03f;
 
@@ -28,6 +31,7 @@ public class DayController : MonoBehaviour
     public void NextDay()
     {
         taskController.ResetAll();
+        count.CountUp();
         StartCoroutine(FadeToNextDay());
     }
 
@@ -37,7 +41,10 @@ public class DayController : MonoBehaviour
         {
             var tempColor = blackScreen.color;
             tempColor.a = i;
+            var textColor = text.color;
+            textColor.a = i;
             blackScreen.color = tempColor;
+            text.color = textColor;
             yield return new WaitForSeconds(fadeAmount);
         }
 
@@ -50,10 +57,18 @@ public class DayController : MonoBehaviour
         {
             var tempColor = blackScreen.color;
             tempColor.a = i;
+            var textColor = text.color;
+            textColor.a = i;
             blackScreen.color = tempColor;
+            text.color = textColor;
             yield return new WaitForSeconds(fadeAmount);
         }
-
+        var tColor = blackScreen.color;
+        tColor.a = 0;
+        var texColor = text.color;
+        texColor.a = 0;
+        blackScreen.color = tColor;
+        text.color = texColor;
         playerController.enabled = true;
     }
 }
