@@ -5,7 +5,9 @@ using UnityEngine;
 public class Trashcan : Interactable
 {
     GameObject player;
+
     AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
