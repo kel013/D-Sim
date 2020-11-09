@@ -9,5 +9,6 @@ public abstract class Interactable : MonoBehaviour
     [SerializeField]
     protected Task linkedTask;
     public abstract void Interact();
+    public virtual void Reset() { }
     public UnityEvent onInteract;
 }

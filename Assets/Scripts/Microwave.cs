@@ -39,4 +39,10 @@ public class Microwave : Interactable
         yield return new WaitForSeconds(1.3f);
         audio.Play();
     }
+
+    public override void Reset()
+    {
+        anim.Play("microwave_close");
+        isOpen = false;
+    }
 }

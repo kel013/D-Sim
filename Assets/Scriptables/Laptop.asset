@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Laptop
   m_EditorClassIdentifier: 
   taskName: '- Check Laptop'
-  done: 1
+  done: 0
   isChecked: 0

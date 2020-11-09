@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Toilet
   m_EditorClassIdentifier: 
   taskName: '- Flush the Toilet'
-  done: 1
+  done: 0
   isChecked: 0

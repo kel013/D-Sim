@@ -17,6 +17,7 @@ public class DayController : MonoBehaviour
 
     float fadeAmount = 0.03f;
 
+    public List<Interactable> interactables = new List<Interactable>();
     public List<Grabbable> grabbables = new List<Grabbable>();
 
 
@@ -47,6 +48,12 @@ public class DayController : MonoBehaviour
             grabbable.gameObject.SetActive(true);
             //Debug.Log(grabbable.gameObject.name);
             grabbable.ResetTransform();
+        }
+        foreach (Interactable interactable in interactables)
+        {
+            interactable.gameObject.SetActive(true);
+            //Debug.Log(grabbable.gameObject.name);
+            interactable.Reset();
         }
     }
 

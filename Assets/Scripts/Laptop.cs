@@ -59,4 +59,12 @@ public class Laptop : Interactable
             textDisplay.text = messageList[currentMessage];
         }
     }
+
+    public override void Reset()
+    {
+        anim.Play("laptop_Close");
+        isOpen = false;
+        currentMessage = 0;
+        textDisplay.text = messageList[currentMessage];
+    }
 }
