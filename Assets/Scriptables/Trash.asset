@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Trash
   m_EditorClassIdentifier: 
   taskName: '- Take out the Trash'
-  done: 1
+  done: 0
   isChecked: 0

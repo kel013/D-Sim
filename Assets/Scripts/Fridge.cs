@@ -13,7 +13,7 @@ public class Fridge : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     public override void Interact()
@@ -62,5 +62,11 @@ public class Fridge : Interactable
     {
         yield return new WaitForSeconds(1.15f);
         audio.Play();
+    }
+
+    public override void Reset()
+    {
+        anim.Play("fridge_close");
+        isOpen = false;
     }
 }

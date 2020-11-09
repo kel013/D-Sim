@@ -63,4 +63,10 @@ public class Freezer : Interactable
         yield return new WaitForSeconds(1.15f);
         audio.Play();
     }
+
+    public override void Reset()
+    {
+        anim.Play("freezer_close");
+        isOpen = false;
+    }
 }

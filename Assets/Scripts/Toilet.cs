@@ -41,4 +41,9 @@ public class Toilet : Interactable
         anim.Play("toilet_Close");
         isOpen = false;
     }
+
+    public override void Reset()
+    {
+        CloseToilet();
+    }
 }

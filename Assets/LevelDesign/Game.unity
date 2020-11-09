@@ -547,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &76383764
 Transform:
   m_ObjectHideFlags: 0
@@ -7740,6 +7740,12 @@ MonoBehaviour:
   count: {fileID: 1679452454}
   text: {fileID: 1754076271}
   dialog: {fileID: 1061932857}
+  interactables:
+  - {fileID: 993698398}
+  - {fileID: 1368631276}
+  - {fileID: 1158022081}
+  - {fileID: 917038247}
+  - {fileID: 917038245}
   grabbables: []
 --- !u!1 &1088054588 stripped
 GameObject:
@@ -7975,7 +7981,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0015affdc896e494f917efbeba90faab, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0015affdc896e494f917efbeba90faab, type: 3}
@@ -9015,7 +9021,7 @@ Transform:
   m_GameObject: {fileID: 1176038122}
   m_LocalRotation: {x: 0.0011462261, y: 0.70888734, z: 0.003767705, w: 0.7053108}
   m_LocalPosition: {x: -9.55, y: 0.20000005, z: -7.12}
-  m_LocalScale: {x: 1.1077181, y: 1.7595387, z: 7.678485}
+  m_LocalScale: {x: 1.4658434, y: 1.7595387, z: 7.678485}
   m_Children: []
   m_Father: {fileID: 1653376546}
   m_RootOrder: 0
@@ -9390,7 +9396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 643ea2f6c32152b4cb8e249e805f6469, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.209993
+      value: 27.898
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 643ea2f6c32152b4cb8e249e805f6469, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15679,7 +15685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a80cb529c8b63a649be88bd3348ad8b7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2223639932434330405, guid: a80cb529c8b63a649be88bd3348ad8b7, type: 3}
