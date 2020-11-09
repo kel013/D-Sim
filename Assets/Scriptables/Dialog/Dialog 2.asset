@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07df0c59bbce6a244bb00488b1d278a2, type: 3}
-  m_Name: Suffer
+  m_Name: Dialog 2
   m_EditorClassIdentifier: 
   lines:
-  - 'Box: Why are we here?'
-  - Just to suffer?
-  - Everyday you wake up and do your daily things
-  - I don't feel anything anymore
-  - Mostly because I'm a box
-  - But you feel it too, don't you?
+  - 'Box: You''re back'
+  - Is it because you have to?
+  - Or is it because of you wanted to? >w<
+  - Ok, that was weird.
+  - 'You: I''m going to leave now.'
+  - 'Box: Good choice.'
