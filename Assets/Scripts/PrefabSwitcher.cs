@@ -16,7 +16,7 @@ public class PrefabSwitcher : MonoBehaviour
         {
             otherObjects[i].SetActive(false);
         }
-        defaultObject.SetActive(true);
+        defaultObject?.SetActive(true);
     }
 
     public void SetRandom()
@@ -33,6 +33,6 @@ public class PrefabSwitcher : MonoBehaviour
         {
             otherObjects[i].SetActive(i == index);
         }
-        defaultObject.SetActive(false);
+        defaultObject?.SetActive(false);
     }
 }
