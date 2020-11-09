@@ -9,7 +9,7 @@ public class ViewDetector : MonoBehaviour
 {
     [SerializeField] private float viewDistance;
     [SerializeField] private Transform optionalLookObject;
-    [SerializeField] private UnityEvent OnDetect, OnUndetect, OnEnterRadius, OnLeaveRadius;
+    [SerializeField] public UnityEvent OnDetect, OnUndetect, OnEnterRadius, OnLeaveRadius;
     private float detectionAngle;
     private bool isLooking, isInRadius;
     private Camera _camera;

@@ -9,18 +9,9 @@ public class PrefabSwitcher : MonoBehaviour
 {
     [SerializeField] private GameObject defaultObject;
     [SerializeField] private GameObject[] otherObjects;
-    private int currPrefab;
 
-    public void SetNextAfterFrames(int frames)
+    public void SetDefault()
     {
-        if ((currPrefab + 1) >= otherObjects.Length)
-            SetAfterFrames(0, frames);
-        SetAfterFrames(currPrefab+1, frames);
-    }
-
-    public void SetDefaultAfterFrames()
-    {
-        // StartCoroutine(SetDefaultAfterFramesCoroutine(frames));
         for (int i = 0; i < otherObjects.Length; i++)
         {
             otherObjects[i].SetActive(false);
@@ -28,10 +19,10 @@ public class PrefabSwitcher : MonoBehaviour
         defaultObject.SetActive(true);
     }
 
-    public void SetRandomAfterFrames(int frames)
+    public void SetRandom()
     {
         var rand = Random.Range(0, otherObjects.Length);
-        SetAfterFrames(rand, frames);
+        Set(rand);
     }
     private void Set(int index)
     {
@@ -41,36 +32,7 @@ public class PrefabSwitcher : MonoBehaviour
         for (int i = 0; i < otherObjects.Length; i++)
         {
             otherObjects[i].SetActive(i == index);
-            currPrefab = index;
         }
         defaultObject.SetActive(false);
-    }
-
-    public void SetAfterFrames(int index, int frames)
-    {
-        StopAllCoroutines();
-        StartCoroutine(SetAfterFramesCoroutine(index, frames));
-    }
-
-    private IEnumerator SetAfterFramesCoroutine(int index, int frames)
-    {
-        for (int i = 0; i < frames; i++)
-        {
-            yield return null;
-        }
-        Set(index);
-    }
-
-    private IEnumerator SetDefaultAfterFramesCoroutine(int frames)
-    {
-        for (int i = 0; i < frames; i++)
-        {
-            yield return null;
-        }
-        for (int i = 0; i < otherObjects.Length; i++)
-        {
-            otherObjects[i].SetActive(false);
-        }
-        defaultObject.SetActive(true);
     }
 }
