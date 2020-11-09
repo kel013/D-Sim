@@ -21,6 +21,10 @@ public class Interactor : MonoBehaviour
         {
             interact();
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
     public void interact()
     {
