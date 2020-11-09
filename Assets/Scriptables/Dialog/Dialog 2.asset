@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Dialog 2
   m_EditorClassIdentifier: 
   lines:
-  - 'Box: You''re back'
+  - 'Box: You''re back.'
   - Is it because you have to?
-  - Or is it because of you wanted to? >w<
+  - Or is it because of you wanted to?
   - Ok, that was weird.
   - 'You: I''m going to leave now.'
   - 'Box: Good choice.'
