@@ -11,11 +11,13 @@ public class DialogDisplay : MonoBehaviour
     float perCharacterPauseTime = 0.1f;
     int currentLine;
     bool talking = false;
+    bool interupt = false;
     public void DisplayDialog(string[] line)
     {
         Debug.Log("talk");
         if (!talking)
         {
+            interupt = false;
             currentLine = 0;
             StartCoroutine(StartDialog(line));
         }
@@ -25,10 +27,22 @@ public class DialogDisplay : MonoBehaviour
         talking = true;
         while (currentLine < line.Length)
         {
+            if(interupt)
+            {
+                yield break;
+            }
             text.text = line[currentLine];
             yield return new WaitForSeconds(1f + line[currentLine].Length * perCharacterPauseTime);
             currentLine++;
         }
+        talking = false;
+        currentLine = 0;
+        text.text = "";
+    }
+
+    public void StopDialog()
+    {
+        interupt = true;
         talking = false;
         currentLine = 0;
         text.text = "";

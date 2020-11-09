@@ -13,6 +13,7 @@ public class DayController : MonoBehaviour
     [SerializeField] AudioSource alarmAudio;
     [SerializeField] DayCounter count;
     [SerializeField] TMP_Text text;
+    [SerializeField] DialogDisplay dialog;
 
     float fadeAmount = 0.03f;
 
@@ -33,6 +34,8 @@ public class DayController : MonoBehaviour
 
     public void NextDay()
     {
+        count.CountUp();
+        dialog.StopDialog();
         StartCoroutine(FadeToNextDay());
     }
 
