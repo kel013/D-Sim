@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf22b5027d44524ea77d2a72fad4e8d, type: 3}
   m_Name: TalkToFriend
   m_EditorClassIdentifier: 
-  taskName: Talk to Your Box
+  taskName: '- Talk to Your Box'
   done: 0
+  isChecked: 0

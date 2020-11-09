@@ -13,6 +13,8 @@ public class Interactor : MonoBehaviour
     [SerializeField]
     LayerMask layer;
 
+    public AudioClip grabSound;
+
     private void Update()
     {
         if(Input.GetKeyDown(interactKey))

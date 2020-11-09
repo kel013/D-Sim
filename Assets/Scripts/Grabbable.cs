@@ -9,11 +9,14 @@ public class Grabbable : Interactable
     bool grabbed = false;
     Rigidbody rb;
 
+    AudioSource audio;
+
     private void Start()
     {
         player = GameObject.FindWithTag("MainCamera");
         grabbed = false;
         rb = this.gameObject.GetComponent<Rigidbody>();
+        audio = player.GetComponent<AudioSource>();
     }
 
     public override void Interact()
@@ -29,6 +32,7 @@ public class Grabbable : Interactable
         }
         else
         {
+            audio.Play();
             grabbed = true;
             if (transform.parent != null)
                 prevPar = this.gameObject.transform.parent.gameObject;

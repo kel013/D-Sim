@@ -5,6 +5,8 @@ using UnityEngine.XR.WSA.Input;
 
 public class TaskController : MonoBehaviour
 {
+    AudioSource audio;
+
     public class TaskCheck
     {
         public Task task;
@@ -21,6 +23,8 @@ public class TaskController : MonoBehaviour
     private void Start()
     {
         ResetAll();
+
+        audio = GameObject.FindWithTag("Board").GetComponent<AudioSource>();
     }
 
     public void ResetAll()
@@ -79,6 +83,9 @@ public class TaskController : MonoBehaviour
         if(activeTasks[x].task.done)
         {
             activeTasks[x].check = true;
+            if (!activeTasks[x].task.isChecked)
+                audio.Play();
+            activeTasks[x].task.isChecked = true;
         }
         display.UpdateList();
     }
@@ -88,6 +95,7 @@ public class TaskController : MonoBehaviour
         for(int x = 0; x < taskList.Count; x++)
         {
             taskList[x].done = false;
+            taskList[x].isChecked = false;
         }
     }
 }
