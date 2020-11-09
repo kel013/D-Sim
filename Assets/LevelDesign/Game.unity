@@ -350,6 +350,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 652439292}
     m_Modifications:
+    - target: {fileID: 6467729790991731020, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729790991731020, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729790991731020, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.09
+      objectReference: {fileID: 0}
     - target: {fileID: 6467729790991731023, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
       propertyPath: m_fontAsset
       value: 
