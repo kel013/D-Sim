@@ -7643,8 +7643,9 @@ MonoBehaviour:
   blackScreen: {fileID: 547583187}
   playerController: {fileID: 429700582}
   alarmAudio: {fileID: 2094044924}
-  count: {fileID: 0}
-  text: {fileID: 0}
+  count: {fileID: 1679452454}
+  text: {fileID: 1754076271}
+  dialog: {fileID: 1061932857}
   grabbables: []
 --- !u!1 &1088054588 stripped
 GameObject:
@@ -12670,6 +12671,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1673870039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1679452454 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+  m_PrefabInstance: {fileID: 70532610}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e02a08c912942428f15f5ae19b967c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1720119928
 GameObject:
   m_ObjectHideFlags: 0
