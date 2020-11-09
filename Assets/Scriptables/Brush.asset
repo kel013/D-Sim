@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Brush
   m_EditorClassIdentifier: 
   taskName: '- Brush Teeth'
-  done: 0
+  done: 1
   isChecked: 0

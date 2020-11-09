@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Fridge
   m_EditorClassIdentifier: 
   taskName: '- Check the Fridge'
-  done: 0
-  isChecked: 0
+  done: 1
+  isChecked: 1

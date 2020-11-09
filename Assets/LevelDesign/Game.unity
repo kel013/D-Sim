@@ -1999,7 +1999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3927bb41254e76e45bdad4356eef702c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.531611
+      value: -14.652
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3927bb41254e76e45bdad4356eef702c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3406,17 +3406,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6467729791082766170, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
   m_PrefabInstance: {fileID: 70532610}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &547583186 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
-  m_PrefabInstance: {fileID: 70532610}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9e02a08c912942428f15f5ae19b967c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &547583187 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6467729791082766173, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
@@ -4672,7 +4661,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 738894707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84113927956f99346bfc30053597b864, type: 3}
+  m_Script: {fileID: 11500000, guid: d75a695a2d317da40a35bbe63bf162ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   linkedTask: {fileID: 11400000, guid: 8a5d7ca9707fc174aa17eee8123fab66, type: 2}
@@ -7654,8 +7643,9 @@ MonoBehaviour:
   blackScreen: {fileID: 547583187}
   playerController: {fileID: 429700582}
   alarmAudio: {fileID: 2094044924}
-  count: {fileID: 547583186}
-  text: {fileID: 1754076271}
+  count: {fileID: 0}
+  text: {fileID: 0}
+  grabbables: []
 --- !u!1 &1088054588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6703924217546833592, guid: 321c3991911d0b44e8473704a3994d48, type: 3}
@@ -15544,7 +15534,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: b7a754122e2bf994ab019aa821f6a9fa, type: 3}
+  - {fileID: 2100000, guid: 0d92f7c26a3278247af40822cc6d9ff6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -16,6 +16,9 @@ public class DayController : MonoBehaviour
 
     float fadeAmount = 0.03f;
 
+    public List<Grabbable> grabbables = new List<Grabbable>();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,9 +33,18 @@ public class DayController : MonoBehaviour
 
     public void NextDay()
     {
-        taskController.ResetAll();
-        count.CountUp();
         StartCoroutine(FadeToNextDay());
+    }
+
+    public void ResetDay()
+    {
+        taskController.ResetAll();
+        foreach (Grabbable grabbable in grabbables)
+        {
+            grabbable.gameObject.SetActive(true);
+            //Debug.Log(grabbable.gameObject.name);
+            grabbable.ResetTransform();
+        }
     }
 
     IEnumerator FadeToNextDay()
@@ -48,6 +60,7 @@ public class DayController : MonoBehaviour
             yield return new WaitForSeconds(fadeAmount);
         }
 
+        ResetDay();
         playerController.enabled = false;
         yield return new WaitForSeconds(1.0f);
         alarmAudio.Play();

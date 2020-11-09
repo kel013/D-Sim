@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Freezer
   m_EditorClassIdentifier: 
   taskName: '- Check the Freezer'
-  done: 0
-  isChecked: 0
+  done: 1
+  isChecked: 1

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Microwave
   m_EditorClassIdentifier: 
   taskName: '- Microwave Food'
-  done: 0
-  isChecked: 0
+  done: 1
+  isChecked: 1
