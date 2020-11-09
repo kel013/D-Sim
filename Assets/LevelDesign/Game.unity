@@ -362,8 +362,12 @@ PrefabInstance:
       value: Black Screen (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1754076271}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
       propertyPath: endOfDayDisplay.Array.size
-      value: 6
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
       propertyPath: endOfDayDisplay.Array.data[4]
@@ -372,6 +376,59 @@ PrefabInstance:
     - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
       propertyPath: endOfDayDisplay.Array.data[5]
       value: You can quit the game now
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[6]
+      value: You're still here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[7]
+      value: I'm glad you enjoy this game enough to play for this long
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[8]
+      value: So uh, yeah... You can stop now
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[9]
+      value: Well, since you're still here, pat yourself in the back or something.
+        There are no new messages.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[10]
+      value: So uh, yeah... You can stop now
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[11]
+      value: Please stop, there is no more new text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[12]
+      value: Ok I lied, there is new text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[13]
+      value: This is the real last text
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[14]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[15]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[16]
+      value: Go do something else
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[17]
+      value: Its a bright day outside
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467729791082766175, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
+      propertyPath: endOfDayDisplay.Array.data[18]
+      value: 7201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9085a36d03d9bdf44a2db8f391bb1fd0, type: 3}
