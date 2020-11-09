@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.567
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.00007857941, g: 0.000018911685, b: 0.0000005077746, a: 0.567}
+  m_IndirectSpecularColor: {r: 0.00007857946, g: 0.000018911738, b: 0.00000050777294, a: 0.567}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15508,6 +15508,9 @@ MonoBehaviour:
   display: {fileID: 1061932857}
   dialogSet:
   - {fileID: 11400000, guid: 0fcd10a8cd13be84ba982b0f113d970d, type: 2}
+  - {fileID: 11400000, guid: ffc9ff9ddd1503b4fbd343d99bde6b0a, type: 2}
+  - {fileID: 11400000, guid: cc68a9bfc6cf9d548878f64e02e63400, type: 2}
+  - {fileID: 11400000, guid: e575802f6da86844196cbe4ab53599db, type: 2}
   - {fileID: 11400000, guid: 99145c9ea42978a40b7e193a1dd99113, type: 2}
 --- !u!65 &2140664726
 BoxCollider:
